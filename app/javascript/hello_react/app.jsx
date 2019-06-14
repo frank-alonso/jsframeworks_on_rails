@@ -1,16 +1,24 @@
 import React from 'react'
+import RowGenerator from './rowgenerator'
+import axios from 'axios'
 
 class App extends React.Component {
   state = {
-    name: 'React',
-    messages: []
+    messages: {testkey: 'testvalue'}
   }
+
+
+  componentDidMount() {
+    axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(res => {
+        this.setState({isLoaded: true, messages: res.data.bpi});
+      })
+  }
+
 
   render () {
       return ( 
-          <table className="table table-striped">
-          <tbody><tr><td>Test</td></tr></tbody>
-          </table>
+          <RowGenerator messages={this.state.messages}/>
         )
   }
 }
