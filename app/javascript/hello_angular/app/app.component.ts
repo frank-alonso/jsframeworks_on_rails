@@ -8,7 +8,9 @@ import { AppService } from './app.service';
   template: `<table class='table table-striped'>
               <tbody>              
                 <tr *ngFor="let message of messages | keyvalue">            
-                  <h1>{{message.key}}</h1>
+                  <td>{{message.value.code}}</td>
+                  <td>{{message.value.rate}}</td>
+                  <td>{{message.value.description}}</td>
                 </tr>
               </tbody>
             </table>`,

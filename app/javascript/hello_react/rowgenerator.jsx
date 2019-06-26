@@ -10,8 +10,12 @@ class RowGenerator extends React.Component {
 
   generateRows(messages) {
     console.log(messages);
-    return Object.keys(messages).map((message) => (
-        <tr><td>{message}</td></tr>
+    return Object.keys(messages).map((key) => (
+        <tr>
+          <td>{messages[key].code}</td>
+          <td>{messages[key].rate}</td>
+          <td>{messages[key].description}</td>
+        </tr>
       ));        
   }
 
