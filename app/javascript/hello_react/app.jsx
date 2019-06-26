@@ -17,8 +17,11 @@ class App extends React.Component {
 
 
   render () {
-      return ( 
-          <RowGenerator messages={this.state.messages}/>
+      return (
+          <div className="container">
+            <h1>Bitcoin Price</h1>
+            <RowGenerator messages={this.state.messages}/>
+          </div>
         )
   }
 }

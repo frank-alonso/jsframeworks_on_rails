@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 
 
 @Component({
-  selector: 'hello-angular',
+  selector: 'table-generator',
   template: `<table class='table table-striped'>
               <tbody>              
                 <tr *ngFor="let message of messages | keyvalue">            
@@ -17,7 +17,7 @@ import { AppService } from './app.service';
   providers: [ AppService ],
 
 })
-export class AppComponent {
+export class TableGenerator {
   messages = ['Angular!', '2', '3'];
 
   constructor(private appService: AppService) {}

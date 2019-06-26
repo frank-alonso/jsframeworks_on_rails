@@ -1,17 +1,17 @@
 <template>
-    <div id="app">
+    <div id="app" class="container">
 
-    <h1>Bitcoin Price</h1>
-    
-    <table class="table table-striped">
-      <tbody>
-        <tr v-for="message in messages">
-          <td>{{ message.code }} </td>
-          <td>{{ message.rate }}</td>
-          <td>{{ message.description }}</td>
-        </tr>
-      </tbody>
-    </table>
+      <h1>Bitcoin Price</h1>
+      
+      <table class="table table-striped">
+        <tbody>
+          <tr v-for="message in messages">
+            <td>{{ message.code }} </td>
+            <td>{{ message.rate }}</td>
+            <td>{{ message.description }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
 </template>
